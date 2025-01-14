@@ -134,7 +134,7 @@ style {
     right: 0;
     bottom: 2.5%;
     background-color: black;
-    background: url("images/card back.webp") center/cover no-repeat;
+    background: url("images/card_back_1.jpg") center/cover no-repeat;
     width: 100%;
     height: auto;
     /* background-size: cover; */
