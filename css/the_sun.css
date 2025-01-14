@@ -10,7 +10,7 @@
     padding: 20px;
 }
 
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
@@ -21,7 +21,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
+} */
 
 h1 {
     font-family: 'Lora', serif;
