@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" as = "image" href="/images/card_back_1.jpg">
+
+    <style>
+        body {
+            position: relative;
+            background-image: url("images/photo-1447433553548-2fc162393482.jpg");
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <p>Deck of Dreams</p>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Welcome to your dreams</h1>
+            <p>Welcome to my portfolio! I’m an aspiring developer and an amateur arist.</p>
+            <p>
+                Below you will find my Deck of Dreams.A tarrot deck I designed.<br> 
+                Each card has its own meaning but viewers can ofcourse derive meanings of their own.
+            </p>
+        </section>
+        <section id="deck">
+            <div class="image-gallery">
+                <div class="image-container">
+                        <img src="images/the_sun.jpg" alt="The Sun" loading="lazy">
+                        <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                        <img src="images/the_star.jpg" alt="The Star" loading="lazy">
+                        <div class="overlay"></div>
+                    </div>
+                <div class="image-container">
+                        <img src="images/the_spider_by_koutsosnikos_df3ag2o-min.jpg" alt="The Spider" loading="lazy">
+                        <div class="overlay"></div>
+                    </div>
+                <div class="image-container">
+                        <img src="images/the_phoenix.jpg"  alt="The Phoenix" loading="lazy">
+                        <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                        <img src="images\the_end.png" alt="The End" loading="lazy">
+                        <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                        <img src="images\the_goddess.png" loading="lazy">
+                        <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                        <img src="images\the_moon.png" loading="lazy">
+                        <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                        <img src="images/the_horror.jpg" loading="lazy">
+                        <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/the_guardian.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/the_facade.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/cherubimon.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/anathema.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/The Tempest-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/THE PRIEST-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/The Lovers-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/The Emperor-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/THE CURSE-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/The Architect-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/Oneiros-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/melancholia_by_koutsosnikos_dfahanh-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/mayura.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/La Llorona-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images\khronos.png" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/erebos_by_koutsosnikos_df9axjm-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/EOS-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+                <div class="image-container">
+                    <img src="images/Arachne-min.jpg" loading="lazy">
+                    <div class="overlay"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Nikolaos Koutsogeorgos. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(() => console.log('Service Worker registered successfully.'))
+                .catch((error) => console.error('Service Worker registration failed:', error));
+        }
+      </script>
+</body>
+</html>
