@@ -68,7 +68,7 @@ header nav ul {
     transform: scale(1.05);
 }
 
-.the-sun-img {
+.the-star-img {
     grid-column: 1;
     grid-row: 1;
     /* width: 100%;  */
