@@ -14,7 +14,8 @@ const cardPages = {
     "The Star": "the_star.html",
     "The Spider": "the_spider.html",
     "The Phoenix": "the_phoenix.html",
-    "The End": "the_end.html"
+    "The End": "the_end.html",
+    "The Goddess": "the_goddess.html"
     // Add more mappings for other cards
 };
 
