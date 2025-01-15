@@ -16,7 +16,7 @@ const cardPages = {
     "The Phoenix": "the_phoenix.html",
     "The End": "the_end.html",
     "The Goddess": "the_goddess.html",
-    "The Moon": "the_Moon.html",
+    "The Moon": "the_moon.html",
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
