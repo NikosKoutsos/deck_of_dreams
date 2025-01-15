@@ -63,21 +63,15 @@ body {
     background-attachment: fixed;
 }
 
-body::after {
+body::after {                   /* Create a dark overlay */
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    /* width: 100%;
-    height: 100%; */
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
     z-index: -1;
 }
-/* header nav a {
-    color: #fff;
-    text-decoration: none;
-} */
 
 main {
     font-family: 'Lora', serif;
@@ -86,9 +80,13 @@ main {
     color: #249c82;
 }
 
-section {
+/* section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
-}
+} */
 
 footer {
     margin-top: 20px;
@@ -117,24 +115,32 @@ style {
 
 }
 .description-box {
-    margin-left: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 5px;
+    margin-bottom: 40px;
     text-shadow: 2px 6px 4px  black;
-    width: 1622px;
+    width: 90%;
     background-color: rgba(0, 0, 0, 0.459);
     border: 2px solid rgba(255, 217, 0, 0.514);
     border-radius: 10px;
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
-    padding: 20px;
+    padding: 20px; 
     overflow-y: auto; /* Scroll if content overflows */
 
     height: auto; /* Adjust based on content */
+    box-sizing: border-box;
 }
 
 .description-box p {
+    flex: 1 1 auto;
     font-family: 'Lora', serif;
     text-align: center;
-    width: 100%;
+    width: 10%;
+    max-width: auto;
     font-size: 1.1rem;
     font-weight: 300;
     line-height: 1.6;
@@ -228,6 +234,20 @@ style {
 
 .card-button:focus{
     outline: none;
+}
+
+
+@media (max-width: 768px) {
+    .description-box p {
+        font-size: 0.9rem; /* Smaller font size on small screens */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .description-box {
+        flex-direction: column; /* Stack content vertically on small screens */
+    }
 }
 
 
