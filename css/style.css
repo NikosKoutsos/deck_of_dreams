@@ -89,15 +89,14 @@ main {
 } */
 
 footer {
-    margin-top: 20px;
+    margin-top: 50px;
     text-align: center;
-    padding: 1rem;
-    background: #333;
+    background: #33333393;
     color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 10px 0;
+    padding: 3px 0;
     z-index: 3;
 }
 
