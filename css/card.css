@@ -9,20 +9,6 @@
     width: 100%;
     padding: 20px;
 }
-
-/* body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    background-image: url("photo-1447433553548-2fc162393482.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} */
-
 h1 {
     font-family: 'Lora', serif;
     font-size: 2rem;

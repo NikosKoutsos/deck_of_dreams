@@ -63,23 +63,9 @@ header nav ul {
     padding: 0;
     
 }
-body {
-    position: relative;
-    background-image: url("images/photo-1447433553548-2fc162393482.avif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
 
-body::after {                   /* Create a dark overlay */
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-    z-index: -1;
-}
+
+
 
 main {
     font-family: 'Lora', serif;
