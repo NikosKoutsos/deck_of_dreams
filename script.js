@@ -21,7 +21,8 @@ const cardPages = {
     "The Guardian": "the_guardian.html",
     "The Facade": "the_facade.html",
     "Benevolence": "benevolence.html",
-    "Anathema": "anathema.html"
+    "Anathema": "anathema.html",
+    "The Tempest": "the_tempest.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
