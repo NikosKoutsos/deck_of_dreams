@@ -19,7 +19,8 @@ const cardPages = {
     "The Moon": "the_moon.html",
     "The Horror": "the_horror.html",
     "The Guardian": "the_guardian.html",
-    "The Facade": "the_facade.html"
+    "The Facade": "the_facade.html",
+    "Benevolence": "benevolence.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
