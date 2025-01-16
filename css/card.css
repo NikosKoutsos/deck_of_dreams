@@ -51,16 +51,26 @@ header nav ul {
     padding: 0;
 }
 footer {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 50px;
     text-align: center;
-    background: #33333393;
+    /* background: #33333393; */
     color: #fff;
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 5px 0;
+    height: 30px;
+    padding: 3px 0;
     z-index: 3;
 }
+
+footer p{
+    margin-right: auto;
+}
+
 .text-gradient {
     background: linear-gradient(45deg, gold, rgba(255, 252, 221, 0.726),rgb(255, 229, 82),rgb(255, 243, 107),rgb(255, 246, 142),rgb(253, 248, 190),rgba(253, 235, 32, 0.719));
     -webkit-text-fill-color: transparent;
