@@ -69,6 +69,7 @@ footer {
 
 footer p{
     margin-right: auto;
+    color: white;
 }
 
 .text-gradient {
@@ -230,16 +231,16 @@ footer p{
     display: block;
     margin: auto;
     max-width: 110%;
-    max-height: 110%;
+    max-height: 300%;
     border-radius: 5px;
 }
 
 .close {
-    position:absolute;
+    position:fixed;
     top: 20px;
     right: 35px;
     color: white;
-    font-size: 40px;
+    font-size: 140px;
     font-weight: bold;
     cursor: pointer;
 }
