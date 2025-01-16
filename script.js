@@ -20,7 +20,8 @@ const cardPages = {
     "The Horror": "the_horror.html",
     "The Guardian": "the_guardian.html",
     "The Facade": "the_facade.html",
-    "Benevolence": "benevolence.html"
+    "Benevolence": "benevolence.html",
+    "Anathema": "anathema.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
