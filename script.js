@@ -18,7 +18,8 @@ const cardPages = {
     "The Goddess": "the_goddess.html",
     "The Moon": "the_moon.html",
     "The Horror": "the_horror.html",
-    "The Guardian": "the_guardian.html"
+    "The Guardian": "the_guardian.html",
+    "The Facade": "the_facade.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
