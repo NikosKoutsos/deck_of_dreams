@@ -185,7 +185,15 @@ footer p{
 }
 
 .description-box::-webkit-scrollbar-thumb {
-    background: #faec9e; /* Thumb color (gold) */
+    background: #ac9e52; 
+    /* background: linear-gradient(
+        120deg,
+        rgb(255, 255, 149),
+        rgb(255, 232, 99),
+        white,
+        rgb(255, 255, 149),
+        rgba(255, 255, 75, 0.699)
+    ); */
     border-radius: 10px; /* Rounded corners for the thumb */
     border: 3px solid transparent; /* Adds spacing inside the thumb */
     background-clip: padding-box; /* Ensures border doesn't overlap thumb */
