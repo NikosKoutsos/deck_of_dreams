@@ -82,15 +82,16 @@ footer p{
     height: auto;
     /* border: 1px solid rgba(255, 217, 0, 0.514); */
     
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
     z-index: 1;
+    
 }
 .card-gradient {
     position: relative; /* Ensure the container is the reference for the ::before element */
-    /* display: inline-block; */
+    display: inline-block;
     max-width: 500px;
     min-width: 300px;
     height: auto;
@@ -105,6 +106,7 @@ footer p{
     left: 0;
     width: 500px;
     height: 707px;
+    box-sizing:inherit;
     background: linear-gradient(
         120deg,
         rgba(255, 255, 255, 0.3),
@@ -116,7 +118,7 @@ footer p{
     background-blend-mode: overlay;
     z-index: 2; 
     opacity: 0; 
-    transition: opacity 0.3s ease-in-out; 
+    /* transition: opacity 0.3s ease-in-out;  */
     pointer-events: none; 
     border-radius: inherit;
     transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
@@ -125,13 +127,13 @@ footer p{
 
 
 .card-gradient:hover {
-    transform: scale(1.04); /* Scale up the entire container */
+    transform: scale(1.04); 
 }
 
 .card-gradient:hover::before {
-    opacity: 1; /* Show the gradient on hover */
-    transform: scale(1.04); /* Scale the gradient along with the card */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Ensure smooth scaling */
+    opacity: 1;
+    transform: scale(1.04);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
 
 .thumbnail:hover {
