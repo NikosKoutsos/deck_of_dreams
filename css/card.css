@@ -80,23 +80,24 @@ footer p{
     max-width: 500px;
     min-width: 300px;
     height: auto;
-    /* border: 1px solid rgba(255, 217, 0, 0.514); */
-    
-    border-radius: 4px;
+    border: 1px solid rgba(255, 242, 172, 0.589);
+    border-radius: 5px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
     z-index: 1;
-    
+    box-sizing: border-box;
 }
 .card-gradient {
-    position: relative; /* Ensure the container is the reference for the ::before element */
+    grid-column: inherit;
+    grid-row: inherit;
+    position: relative; 
     display: inline-block;
     max-width: 500px;
     min-width: 300px;
     height: auto;
     border-radius: 5px;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Use a smooth easing function */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .card-gradient::before {
@@ -104,8 +105,8 @@ footer p{
     position: absolute;
     top: 0;
     left: 0;
-    width: 500px;
-    height: 707px;
+    width: 100%;
+    height: 99.26%;
     box-sizing:inherit;
     background: linear-gradient(
         120deg,
@@ -118,11 +119,11 @@ footer p{
     background-blend-mode: overlay;
     z-index: 2; 
     opacity: 0; 
-    /* transition: opacity 0.3s ease-in-out;  */
+    transition: opacity 0.3s ease-in-out; 
     pointer-events: none; 
     border-radius: inherit;
     transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Same duration and easing as .card-gradient */
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
@@ -138,10 +139,11 @@ footer p{
 
 .thumbnail:hover {
     transform: scale(1.04);
+    z-index: 2;
 }
 
 
-.the-sun-img {
+/* .the-sun-img {
     grid-column: 1;
     grid-row: 1;
     justify-self: center;
@@ -154,7 +156,7 @@ footer p{
     min-width: 800px;
     height: auto;
     flex-shrink: 0;
-}
+} */
 
 .description-box {
     grid-column: 2;
