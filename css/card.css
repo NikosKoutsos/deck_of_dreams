@@ -3,11 +3,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Cards fit dynamically */
     align-items: start;
-    grid-gap: 50px;
+    grid-gap: 5px;
     align-items: start;
     max-width: 100%; /* You can adjust this as needed */
     width: 80%;
-    padding: 20px;
+    padding: 50px;
 }
 h1 {
     font-family: 'Lora', serif;
@@ -48,15 +48,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -100px;
+    margin-bottom: 10px;
     text-align: center;
     color: #fff;
-    position: fixed;
+    position: fixed; /* Changes from absolute to fixed */
     bottom: 0;
-    width: 50%;
+    width: 20%; /* Make the footer span the full width */
     height: 30px;
     padding: 3px 0;
     z-index: 3;
+    overflow: visible;
 }
 
 footer p{
@@ -74,28 +75,26 @@ footer p{
     height: calc(100vh - 65px);
 }
 
-.content-wrapper::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
+.content-wrapper::-webkit-scrollbar { /* Adjusts the size of the vertical scroll bar */
+    width: 12px; 
+}
+.content-wrapper::-webkit-scrollbar:horizontal {  /* Adjusts the size of the horizontal scroll bar */
+    height: 12px; 
 }
 
 .content-wrapper::-webkit-scrollbar-thumb {
     background: #ac9e52; 
-    /* background: linear-gradient(
-        120deg,
-        rgb(255, 255, 149),
-        rgb(255, 232, 99),
-        white,
-        rgb(255, 255, 149),
-        rgba(255, 255, 75, 0.699)
-    ); */
     border-radius: 10px; /* Rounded corners for the thumb */
-    border: 3px solid transparent; /* Adds spacing inside the thumb */
-    background-clip: padding-box; /* Ensures border doesn't overlap thumb */
+    border: 3px solid transparent; 
+    background-clip: padding-box; 
 }
 
 .content-wrapper::-webkit-scrollbar-track {
     background: #333333; /* Track color (dark gray) */
-    border-radius: 10px; /* Rounded corners for the track */
+    border-radius: 10px; 
+}
+.content-wrapper::-webkit-scrollbar-corner {
+    background: #333333; /* Hide the corner artifact */
 }
 
 .horizontal-scroll-wrapper {
@@ -211,8 +210,8 @@ footer p{
     grid-column: 2;
     grid-row: 1;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    margin-left: 50px;
-    width: 1700%;
+    margin-left: 40px;
+    width: 1800%;
     background-color: rgba(0, 0, 0, 0.7);
     border: 2px solid rgba(255, 217, 0, 0.514);
     border-radius: 10px;
