@@ -26,7 +26,8 @@ const cardPages = {
     "The Priest": "the_priest.html",
     "The Lovers": "the_lovers.html",
     "The Emperor": "the_emperor.html",
-    "Mayura": "mayura.html"
+    "Mayura": "mayura.html",
+    "The Curse": "the_curse.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
