@@ -176,20 +176,22 @@ footer p{
     
 }
 
+/* css styling for the scroll bar in the description box */
 
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr; /* Stack content vertically on smaller screens */
-        gap: 10px;
-    }
-    .the-sun-img{
-        justify-self: center;
-        min-width: 150px;
-    }
+.description-box::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
 
-    .description-box {
-        margin-left: 0; /* Remove margin when stacked */
-    }
+.description-box::-webkit-scrollbar-thumb {
+    background: #faec9e; /* Thumb color (gold) */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 3px solid transparent; /* Adds spacing inside the thumb */
+    background-clip: padding-box; /* Ensures border doesn't overlap thumb */
+}
+
+.description-box::-webkit-scrollbar-track {
+    background: #333333; /* Track color (dark gray) */
+    border-radius: 10px; /* Rounded corners for the track */
 }
 
 .description-box p {
@@ -213,6 +215,23 @@ footer p{
 .description-box p:hover {
     background-position: 100% 0;
 }
+
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack content vertically on smaller screens */
+        gap: 10px;
+    }
+    .the-sun-img{
+        justify-self: center;
+        min-width: 150px;
+    }
+
+    .description-box {
+        margin-left: 0; /* Remove margin when stacked */
+    }
+}
+
 
 .modal {
     display: none;
