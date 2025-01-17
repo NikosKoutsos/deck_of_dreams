@@ -24,7 +24,8 @@ const cardPages = {
     "Anathema": "anathema.html",
     "The Tempest": "the_tempest.html",
     "The Priest": "the_priest.html",
-    "The Lovers": "the_lovers.html"
+    "The Lovers": "the_lovers.html",
+    "The Emperor": "the_emperor.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
