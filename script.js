@@ -23,7 +23,8 @@ const cardPages = {
     "Benevolence": "benevolence.html",
     "Anathema": "anathema.html",
     "The Tempest": "the_tempest.html",
-    "The Priest": "the_priest.html"
+    "The Priest": "the_priest.html",
+    "The Lovers": "the_lovers.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
