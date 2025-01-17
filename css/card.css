@@ -169,8 +169,13 @@ footer p{
     overflow-y: auto; /* Scroll if content overflows */
     max-width: 1000px; /* Ensure it doesn't exceed its grid cell */
     height: auto; /* Adjust based on content */
+    /* Add these properties for scrollbar */
+    max-height: 650px; /* Limit the height */
+    overflow-y: auto; /* Add vertical scrollbar */
+
     
 }
+
 
 @media (max-width: 768px) {
     .container {
@@ -201,6 +206,8 @@ footer p{
     -webkit-background-clip: text;
     text-shadow: 1px 1px 5px  rgba(255, 217, 0, 0.329);
     transition: background-position 1s ease-in-out;
+
+
 }
 
 .description-box p:hover {
