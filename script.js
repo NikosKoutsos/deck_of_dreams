@@ -29,7 +29,8 @@ const cardPages = {
     "Mayura": "mayura.html",
     "The Curse": "the_curse.html",
     "The Architect": "the_architect.html",
-    "Oneiros": "oneiros.html"
+    "Oneiros": "oneiros.html",
+    "Error" : "unknown.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
