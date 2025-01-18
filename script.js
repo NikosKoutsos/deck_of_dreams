@@ -28,7 +28,8 @@ const cardPages = {
     "The Emperor": "the_emperor.html",
     "Mayura": "mayura.html",
     "The Curse": "the_curse.html",
-    "The Architect": "the_architect.html"
+    "The Architect": "the_architect.html",
+    "Oneiros": "oneiros.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
