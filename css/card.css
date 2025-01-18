@@ -51,7 +51,7 @@ footer {
     margin-bottom: 10px;
     text-align: center;
     color: #fff;
-    position: fixed; /* Changes from absolute to fixed */
+    position: fixed;
     bottom: 0;
     width: 20%; /* Make the footer span the full width */
     height: 30px;

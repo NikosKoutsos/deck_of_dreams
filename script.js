@@ -31,7 +31,8 @@ const cardPages = {
     "The Architect": "the_architect.html",
     "Oneiros": "oneiros.html",
     "Error" : "unknown.html",
-    "Melancholia": "melancholia.html"
+    "Melancholia": "melancholia.html",
+    "La Llorona": "la_llorona.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
