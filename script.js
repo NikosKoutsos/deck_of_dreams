@@ -30,7 +30,8 @@ const cardPages = {
     "The Curse": "the_curse.html",
     "The Architect": "the_architect.html",
     "Oneiros": "oneiros.html",
-    "Error" : "unknown.html"
+    "Error" : "unknown.html",
+    "Melancholia": "melancholia.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
