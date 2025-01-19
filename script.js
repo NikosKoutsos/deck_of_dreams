@@ -33,7 +33,8 @@ const cardPages = {
     "Error" : "unknown.html",
     "Melancholia": "melancholia.html",
     "La Llorona": "la_llorona.html",
-    "Khronos": "khronos.html"
+    "Khronos": "khronos.html",
+    "Eos": "eos.html"
 };
 
 document.querySelectorAll('.image-container').forEach((container) => {
