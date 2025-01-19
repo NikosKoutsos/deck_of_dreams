@@ -85,3 +85,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+// Select the Reveal All button
+const revealAllButton = document.getElementById('reveal-all');
+
+// Add event listener for button click
+revealAllButton.addEventListener('click', function () {
+    // Select all image-container elements
+    const cards = document.querySelectorAll('.image-gallery .image-container');
+
+    // Check if any card is currently revealed
+    const isRevealed = [...cards].some(card => card.classList.contains('revealed'));
+
+    if (isRevealed) {
+        // If already revealed, bring back the covers
+        cards.forEach(card => card.classList.remove('revealed'));
+        revealAllButton.textContent = 'Reveal'; // Update button text
+    } else {
+        // If not revealed, reveal all cards
+        cards.forEach(card => card.classList.add('revealed'));
+        revealAllButton.textContent = 'Conceal'; // Update button text
+    }
+});

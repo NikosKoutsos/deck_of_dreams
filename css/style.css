@@ -193,14 +193,15 @@ style {
     z-index: 2;
 }
 
-.image-gallery .image-container:hover .overlay {
-    opacity: 0;
+/* Revealed state: force overlay to be hidden */
+.image-gallery .image-container.revealed .overlay {
+    opacity: 0 !important; /* Ensure the overlay is completely hidden */
 }
 
 /* Apply zoom effect to the container, not the image */
-.image-gallery .image-container:hover {
-    transform: scale(1.15); /* Zoom effect on container */
-    z-index: 1;
+.image-gallery .image-container.revealed:hover {
+    transform: scale(1.15); /* Zoom effect remains */
+    z-index: 1; /* Keep hover priority */
 }
 
 .image-gallery .image-container{
