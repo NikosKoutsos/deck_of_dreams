@@ -108,3 +108,24 @@ revealAllButton.addEventListener('click', function () {
         revealAllButton.textContent = 'Conceal'; // Update button text
     }
 });
+
+// Shuffle the cards on page load
+document.addEventListener('DOMContentLoaded', function () {
+    const gallery = document.querySelector('.image-gallery');
+    const cards = Array.from(gallery.children); // Get all card elements
+
+    // Shuffle function
+    function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1)); // Random index
+            [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+        }
+        return array;
+    }
+
+    // Shuffle cards
+    const shuffledCards = shuffle(cards);
+
+    // Clear the gallery and re-add the shuffled cards
+    shuffledCards.forEach(card => gallery.appendChild(card));
+});
