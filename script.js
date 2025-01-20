@@ -112,13 +112,13 @@ revealAllButton.addEventListener('click', function () {
 // Shuffle the cards on page load
 document.addEventListener('DOMContentLoaded', function () {
     const gallery = document.querySelector('.image-gallery');
-    const cards = Array.from(gallery.children); // Get all card elements
+    const cards = Array.from(gallery.children); 
 
     // Shuffle function
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1)); // Random index
-            [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+            const j = Math.floor(Math.random() * (i + 1)); 
+            [array[i], array[j]] = [array[j], array[i]]; 
         }
         return array;
     }
