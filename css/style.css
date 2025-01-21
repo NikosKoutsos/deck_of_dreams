@@ -251,7 +251,7 @@ style {
     }
 
     .image-gallery .image-container {
-        width: 50%;
+        width: 30%;
     }
 
     #reveal-all {
@@ -272,6 +272,7 @@ style {
 
     .description-box {
         padding: 10px;
+        max-width: 100%;
     }
 
     .image-gallery {
@@ -279,7 +280,7 @@ style {
     }
 
     .image-gallery .image-container {
-        width: 40%;
+        width: 20%;
     }
 
     #reveal-all {
