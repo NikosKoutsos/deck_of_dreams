@@ -231,15 +231,60 @@ style {
 
 
 @media (max-width: 768px) {
+    header {
+        font-size: 1.2rem;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .description-box {
+        padding: 20px;
+        max-width: 90%;
+    }
+
     .description-box p {
-        font-size: 0.9rem; /* Smaller font size on small screens */
-        max-width: 50%;
+        font-size: 0.8rem;
+    }
+
+    .image-gallery {
+        gap: 10px;
+    }
+
+    .image-gallery .image-container {
+        width: 30%;
+    }
+
+    #reveal-all {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
 
 @media (max-width: 480px) {
+    header {
+        font-size: 1rem;
+        padding: 5px 0;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
     .description-box {
-        flex-direction: column; /* Stack content vertically on small screens */
+        padding: 10px;
+    }
+
+    .image-gallery {
+        gap: 5px;
+    }
+
+    .image-gallery .image-container {
+        width: 15%;
+    }
+
+    #reveal-all {
+        font-size: 12px;
+        /* padding: 5px 10px; */
     }
 }
 
