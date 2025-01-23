@@ -112,10 +112,12 @@ style {
     text-shadow: 2px 6px 4px black;
     width: 100%;               /* Make the box width 100% */
     max-width: 1650px;          /* Limit the width to a max value for large screens */
-    background-color: rgba(0, 0, 0, 0.459);
-    border: 1px solid rgba(255, 217, 0, 0.678);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.450);
+    /* border: 1px solid rgba(255, 229, 82, 0.288); */
+    border-radius: 2px;
+    box-shadow: -5px 8px 32px rgba(0, 0, 0, 1);
+    
+    /* box-shadow: 20px -16px 64px rgba(0, 0, 0, 1); */
     padding: 40px; 
     overflow-y: hidden;          /* Scroll if content overflows */
     height: auto;              /* Adjust based on content */
@@ -168,7 +170,6 @@ style {
     object-position: center;
     /* border: 1px solid rgba(255, 242, 172, 0.589); */
     box-sizing: border-box;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
     
 }
 
@@ -191,7 +192,7 @@ style {
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
     border-radius: 2px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+    box-shadow: 5px 4px 3px rgba(0, 0, 0, 1);
     z-index: 2;
 }
  /* Manual card reveal with minor scaling of the card */
