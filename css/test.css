@@ -1,0 +1,171 @@
+/* Header at the top of the site */
+header {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 700;
+    /* font-style: italic; */
+    background: #00000065;
+    color: #6e7000;
+
+    text-align: center;
+    font-size: x-large;
+    padding: 2px 0;
+    margin-top: -10px;
+    box-shadow: 0px 4px 16px rgb(0, 0, 0);
+}
+
+/* Body setup */
+body {
+    margin: 0;
+    height: 100vh; /* Ensures the full viewport height is covered */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+
+
+img {
+    /* max-width: 150%; */
+    width: 600px;
+    height: 800px;      /* Maintains the aspect ratio */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect */
+}
+
+/* ------------------------------------------------------------------------classes------------------------------------------------------------- */
+
+
+.container {
+    flex: 1;
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px; 
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, gold, rgba(255, 252, 221, 0.726),rgb(255, 229, 82),rgb(255, 243, 107),rgb(255, 246, 142),rgb(253, 248, 190),rgba(253, 235, 32, 0.719));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 5px  rgba(255, 217, 0, 0.329);
+}
+
+.flipper {
+    position: relative; /* Ensure positioning context for absolute children */
+    width: 600px;
+    height: 800px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    cursor: pointer;
+    transform-origin: center; /* Ensure flip occurs around the center */
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Ensure it's on top of other elements */
+}
+
+.flipper.is-flipped {
+    transform: rotateY(180deg); /* Flips the card */
+}
+
+img, .back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Use absolute positioning to avoid viewport positioning */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Ensures the back is hidden during the flip */
+    border-radius: 5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect */
+    z-index: 2; /* Ensure images are stacked correctly */
+}
+
+
+img.front {
+    display: block;
+}
+
+/* .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg); 
+    backface-visibility: hidden; 
+    background-color: #00000041; 
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); 
+} */
+
+.back {
+    transform: rotateY(180deg); /* Initially flipped */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    text-align: center;
+    /* word-wrap: break-word; */
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%; /* Ensure the back side also stretches fully */
+}
+/* .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.close {
+    position:fixed;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 140px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover{
+    color: red;
+}
+
+.caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+} */
