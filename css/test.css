@@ -40,6 +40,12 @@ img {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect */
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* ------------------------------------------------------------------------classes------------------------------------------------------------- */
 
 
@@ -52,13 +58,16 @@ img {
     align-items: center;
     perspective: 2000px; 
 }
+/* img {
+    border: 2px solid blue;
+} */
 
 .text-gradient {
     background: linear-gradient(45deg, gold, rgba(255, 252, 221, 0.726),rgb(255, 229, 82),rgb(255, 243, 107),rgb(255, 246, 142),rgb(253, 248, 190),rgba(253, 235, 32, 0.719));
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    text-shadow: 1px 1px 5px  rgba(255, 217, 0, 0.329);
+    text-shadow: 1px 1px 3px  rgb(255, 243, 107);
 }
 
 .flipper {
@@ -72,6 +81,7 @@ img {
     margin: 0;
     padding: 0;
     z-index: 1; /* Ensure it's on top of other elements */
+    /* border: 2px solid red; */
 }
 
 .flipper.is-flipped {
@@ -79,7 +89,7 @@ img {
 }
 
 img, .back {
-    display: flex;
+    display: absolute;
     align-items: center;
     justify-content: center;
     position: absolute; /* Use absolute positioning to avoid viewport positioning */
@@ -91,6 +101,8 @@ img, .back {
     border-radius: 5px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect */
     z-index: 2; /* Ensure images are stacked correctly */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 
@@ -115,18 +127,42 @@ img.front {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); 
 } */
 
+
+
 .back {
-    transform: rotateY(180deg); /* Initially flipped */
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
-    color: white;
-    font-size: 1.2rem;
-    padding: 10px;
-    text-align: center;
-    /* word-wrap: break-word; */
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100%; /* Ensure the back side also stretches fully */
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg); /* Flip the back */
+    background-color: rgba(0, 0, 0, 0.664); /* Background for the back */
+    color: white; /* Text color for the back */
+    font-size: 1.3rem; /* Font size */
+    text-align: justify; /* Optional: to align text nicely */
+    overflow-y: scroll; /* Allow scrolling for text overflow */
+    overflow-x: hidden; /* No horizontal scrolling */
+    padding: 50px 10px 20px; /* Top, Right & Left, Bottom */
+    box-sizing: border-box;
+    line-height: 1.1;
+    position: inherit; /* Positioning context for the pseudo-element */
+    z-index: 1; /* Ensure it's on top of the description background */
 }
+
+.back::-webkit-scrollbar {
+    width: 0px; /* Hides the scrollbar */
+}
+
+
+.back p {
+    padding: 50px 10px 20px; /* Top, Right & Left, Bottom */
+    position: absolute;
+    background: linear-gradient(45deg, gold, rgba(255, 252, 221, 0.726),rgb(255, 229, 82),rgb(255, 243, 107),rgb(255, 246, 142),rgb(253, 248, 190),rgba(253, 235, 32, 0.719));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 3px  rgb(255, 243, 107);
+}
+
 /* .modal {
     display: none;
     position: fixed;
