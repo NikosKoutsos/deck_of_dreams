@@ -58,9 +58,6 @@ img {
     align-items: center;
     perspective: 2000px; 
 }
-/* img {
-    border: 2px solid blue;
-} */
 
 .text-gradient {
     background: linear-gradient(45deg, gold, rgba(255, 252, 221, 0.726),rgb(255, 229, 82),rgb(255, 243, 107),rgb(255, 246, 142),rgb(253, 248, 190),rgba(253, 235, 32, 0.719));
@@ -110,23 +107,6 @@ img.front {
     display: block;
 }
 
-/* .back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(180deg); 
-    backface-visibility: hidden; 
-    background-color: #00000041; 
-    color: white;
-    font-size: 1.2rem;
-    text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); 
-} */
-
 
 
 .back {
@@ -141,11 +121,14 @@ img.front {
     text-align: justify; /* Optional: to align text nicely */
     overflow-y: scroll; /* Allow scrolling for text overflow */
     overflow-x: hidden; /* No horizontal scrolling */
-    padding: 50px 10px 20px; /* Top, Right & Left, Bottom */
+    padding: 50px 20px 20px; /* Top, Right & Left, Bottom */
     box-sizing: border-box;
     line-height: 1.1;
     position: inherit; /* Positioning context for the pseudo-element */
     z-index: 1; /* Ensure it's on top of the description background */
+    border-color: black;
+    border-style:ridge;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect */
 }
 
 .back::-webkit-scrollbar {
@@ -162,6 +145,17 @@ img.front {
     -webkit-background-clip: text;
     text-shadow: 1px 1px 3px  rgb(255, 243, 107);
 }
+/* .card-gradient {
+    position: relative; 
+    display: flex;
+    max-width: 600px;
+    min-width: 800px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    aspect-ratio: 3 / 4;
+} */
+
 
 /* .modal {
     display: none;
