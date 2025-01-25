@@ -137,13 +137,16 @@ img.front {
 
 
 .back p {
-    padding: 30px 10px 20px; /* Top, Right & Left, Bottom */
+    padding: 0px 10px 0px; /* Top, Right & Left, Bottom */
     position: absolute;
+    font-weight: 200;
+    line-height: 1.1;
     background: linear-gradient(45deg, gold, rgba(255, 252, 221, 0.726),rgb(255, 229, 82),rgb(255, 243, 107),rgb(255, 246, 142),rgb(253, 248, 190),rgba(253, 235, 32, 0.719));
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
     text-shadow: 1px 1px 3px  rgb(255, 243, 107);
+    text-align: center;
 }
 /* .card-gradient {
     position: relative; 

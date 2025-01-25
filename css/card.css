@@ -198,7 +198,7 @@ footer p{
     grid-column: 2;
     grid-row: 1;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    margin-left: 20px;
+    margin-left: 0px;
     width: 1800%;
     background-color: rgba(0, 0, 0, 0.450);
     /* border: 2px solid rgba(255, 217, 0, 0.514); */
@@ -218,7 +218,7 @@ footer p{
 /* css styling for the scroll bar in the description box */
 
 .description-box::-webkit-scrollbar {
-    width: 12px;
+    width: 0px;
 }
 
 .description-box::-webkit-scrollbar-thumb {
