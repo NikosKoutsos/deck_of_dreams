@@ -35,9 +35,10 @@ body {
 img {
     /* max-width: 150%; */
     width: 600px;
-    height: 800px;      /* Maintains the aspect ratio */
+    height: 877px;      /* Maintains the aspect ratio */
     border-radius: 5px; /* Optional: adds rounded corners */
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect */
+    /* -webkit-box-reflect: left 0px linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.4)); */
 }
 
 * {
@@ -47,7 +48,6 @@ img {
 }
 
 /* ------------------------------------------------------------------------classes------------------------------------------------------------- */
-
 
 .container {
     flex: 1;
@@ -70,7 +70,7 @@ img {
 .flipper {
     position: relative; /* Ensure positioning context for absolute children */
     width: 600px;
-    height: 800px;
+    height: 877px;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out;
     cursor: pointer;
@@ -78,6 +78,7 @@ img {
     margin: 0;
     padding: 0;
     z-index: 1; /* Ensure it's on top of other elements */
+    bottom: 8px;
     /* border: 2px solid red; */
 }
 
@@ -105,6 +106,8 @@ img, .back {
 
 img.front {
     display: block;
+    /* -webkit-box-reflect: right 0px linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.4)); */
+
 }
 
 
@@ -115,7 +118,7 @@ img.front {
     align-items: center;
     justify-content: center;
     transform: rotateY(180deg); /* Flip the back */
-    background-color: rgba(0, 0, 0, 0.664); /* Background for the back */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white; /* Text color for the back */
     font-size: 1.3rem; /* Font size */
     text-align: justify; /* Optional: to align text nicely */
