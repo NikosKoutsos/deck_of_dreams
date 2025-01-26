@@ -118,7 +118,8 @@ img.front {
     align-items: center;
     justify-content: center;
     transform: rotateY(180deg); /* Flip the back */
-    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+
     color: white; /* Text color for the back */
     font-size: 1.3rem; /* Font size */
     text-align: justify; /* Optional: to align text nicely */
@@ -132,6 +133,20 @@ img.front {
     border-color: black;
     border-style:ridge;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Optional: adds a shadow effect */
+}
+
+.back::before {
+    content: ""; /* Required to create the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    background: url("../images/deck-of-dreams.jpg") center/cover no-repeat;
+    background-size: cover;
+    opacity: .05; /* Apply the opacity to the background */
+    z-index: -1; /* Make sure it's behind the text */
 }
 
 .back::-webkit-scrollbar {
