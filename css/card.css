@@ -119,14 +119,14 @@ footer p{
 }
 
 .thumbnail {
-    width: 100%;
+    width: 500px;
+    height: 700px;
     grid-column: 1;
     grid-row: 1;
     justify-self: start;
     align-self: start;
-    max-width: 500px;
-    min-width: 300px;
-    height: auto;
+    /* max-width: 500px;
+    min-width: 300px; */
     border: 1px solid rgba(255, 242, 172, 0.589);
     border-radius: 5px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 1);
@@ -280,7 +280,7 @@ footer p{
 
     .thumbnail {
         width: 100%;
-        max-width: 400px; 
+        /* max-width: 400px;  */
         height: auto;
         margin: 0 auto; 
         margin-left: 30px;
