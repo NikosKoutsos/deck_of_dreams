@@ -263,9 +263,13 @@ footer p{
         flex-direction: column;
         align-items: center; /* Center items horizontally */
         justify-content: flex-start; /* Align items vertically */
-        margin: 0; /* Remove default margin */
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        margin: 0;
         padding: 0;
-        overflow-y: auto;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow: clip;
     }
 
     .container {
