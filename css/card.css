@@ -264,6 +264,7 @@ footer p{
         background-size:cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        background-attachment: scroll; /* Prevent jitter on mobile devices */
         align-items: center; /* Center items horizontally */
         justify-content: flex-start; /* Align items vertically */
         margin: 0; /* Remove default margin */
