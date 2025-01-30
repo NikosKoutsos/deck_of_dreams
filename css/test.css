@@ -145,7 +145,7 @@ img.front {
     background-color: black;
     background: url("../images/deck-of-dreams.jpg") center/cover no-repeat;
     background-size: cover;
-    opacity: .05; /* Apply the opacity to the background */
+    opacity: .3; /* Apply the opacity to the background */
     z-index: -1; /* Make sure it's behind the text */
 }
 
@@ -167,7 +167,7 @@ img.front {
     text-align: center;
 }
 /* .card-gradient {
-    position: relative; 
+    position: absolute; 
     display: flex;
     max-width: 600px;
     min-width: 800px;

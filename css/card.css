@@ -73,7 +73,7 @@ footer p{
     /* padding-bottom: 600px; */
     box-sizing: border-box;
     width: 100%;
-    height: calc(100vh - 65px);
+    height: calc(100vh + 450px);
 }
 
 .content-wrapper::-webkit-scrollbar { /* Adjusts the size of the vertical scroll bar */
@@ -287,7 +287,7 @@ footer p{
     }
 
     .description-box {
-        width: 100%; /* Same width as the image */
+        width: 350px; /* Same width as the image */
         /* max-width: 400px; */
         height: 1700px; /* Set a fixed height for the box */
         padding: 10px;
@@ -295,19 +295,19 @@ footer p{
         line-height: 1.6;
         color: #f5e9c3;
         background: rgba(0, 0, 0, 0.7);
-        border-radius: 10px;
+        border-radius: 5px;
         text-align: justify;
         margin: 0 auto; /* Center the box */
         overflow-y: auto; /* Enable vertical scrolling if content overflows */
         box-sizing: border-box;
-        margin-left: 30px;
+        margin-left: 10px;
     }
     
     .card-gradient {
         width: 100%;
         max-width: 400px;
         aspect-ratio: 3 / 4;
-        border-radius: 10px;
+        border-radius: 5px;
         /* margin-left: 35px; */
     }
     .card-gradient::before {
@@ -338,7 +338,7 @@ footer p{
     }
 
     .thumbnail {
-        border-radius: 10px; /* Match the card */
+        border-radius: 5px; /* Match the card */
     }
     
 
