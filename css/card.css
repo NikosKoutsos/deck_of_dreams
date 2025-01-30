@@ -282,13 +282,22 @@ footer p{
         max-width: 100%;
         overflow-y: visible; /* Ensure content isn't clipped */
     }
+    .content-wrapper{
+        display: flex;
+        overflow-x: auto;
+        overflow-y: auto;
+        /* padding-bottom: 600px; */
+        box-sizing: border-box;
+        width: 100%;
+        height: calc(100vh + 430px);
+    }
 
     .thumbnail {
         width: 100%;
         /* max-width: 400px;  */
         height: auto;
         margin: 0 auto; 
-        margin-left: 30px;
+        margin-left: 29px;
     }
 
     .description-box {
@@ -305,7 +314,7 @@ footer p{
         margin: 0 auto; /* Center the box */
         overflow-y: auto; /* Enable vertical scrolling if content overflows */
         box-sizing: border-box;
-        margin-left: 10px;
+        margin-left: 11px;
     }
     
     .card-gradient {
@@ -392,8 +401,8 @@ footer p{
 .modal-content {
     display: block;
     margin: auto;
-    max-width: 150vw;
-    max-height: 150vh;
+    max-width: 100vw;
+    max-height: 100vh;
     border-radius: 5px;
 }
 
@@ -402,13 +411,13 @@ footer p{
     top: 20px;
     right: 35px;
     color: white;
-    font-size: 140px;
-    font-weight: bold;
+    font-size: 70px;
+    /* font-weight: bold; */
     cursor: pointer;
 }
 
 .close:hover{
-    color: red;
+    color: rgb(255, 253, 159);
 }
 
 .caption {
