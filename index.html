@@ -159,13 +159,8 @@
                     </div>
                 </div>
     </main>
-    <script src="script.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then(() => console.log('Service Worker registered successfully.'))
-                .catch((error) => console.error('Service Worker registration failed:', error));
-        }
-      </script>
+    <script src="script.js" defer></script>
+    <script src="cache.js" defer></script>
+
 </body>
 </html>
