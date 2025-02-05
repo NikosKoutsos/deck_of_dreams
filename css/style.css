@@ -176,6 +176,7 @@ style {
     /* border: 1px solid rgba(255, 242, 172, 0.589); */
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 1);
     box-sizing: border-box;
+    will-change: transform, opacity;
     
 }
 
@@ -194,6 +195,7 @@ style {
     transition: opacity 0.3s ease-in-out;
     border-radius: 2px;
     z-index: 2;
+    will-change: transform, opacity;
 }
  /* Manual card reveal with minor scaling of the card */
 .image-gallery .image-container:hover{       
