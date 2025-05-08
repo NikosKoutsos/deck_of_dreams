@@ -8,6 +8,12 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
+// Register service worker immediately instead of waiting for DOMContentLoaded
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registered successfully.'))
+        .catch((error) => console.error('Service Worker registration failed:', error));
+}
 
 const cardPages = {
     "The Sun": "the_sun.html",
@@ -59,33 +65,67 @@ document.querySelectorAll('.image-container').forEach((container) => {
     });
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Remove duplicate image preloading code and replace with optimized version
     const images = document.querySelectorAll('.image-gallery img');
-
-    // Preload all images so they are ready for hover interaction
-    images.forEach(image => {
-        const img = new Image();
-        img.src = image.src; // Preload image
-    });
+    
+    // Use Intersection Observer for lazy loading images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const image = entry.target;
+                    const dataSrc = image.getAttribute('data-src');
+                    
+                    if (dataSrc) {
+                        image.src = dataSrc;
+                    }
+                    
+                    image.onload = () => {
+                        image.classList.add('loaded');
+                    };
+                    
+                    // Stop observing the image after it's loaded
+                    observer.unobserve(image);
+                    
+                    // If image is already loaded (from cache)
+                    if (image.complete) {
+                        image.classList.add('loaded');
+                    }
+                }
+            });
+        }, {
+            rootMargin: '200px 0px', // Start loading when image is 200px away
+            threshold: 0.01
+        });
+        
+        // Observe all images
+        images.forEach(image => {
+            // Store original src in data-src and leave src empty or with placeholder
+            if (!image.hasAttribute('data-src') && image.src) {
+                image.setAttribute('data-src', image.src);
+                // You could use a tiny placeholder or low-res version here
+                // image.src = 'placeholder.jpg';
+            }
+            imageObserver.observe(image);
+        });
+    } else {
+        // Fallback for browsers that don't support Intersection Observer
+        images.forEach(image => {
+            if (image.getAttribute('data-src')) {
+                image.src = image.getAttribute('data-src');
+            }
+            
+            image.onload = () => {
+                image.classList.add('loaded');
+            };
+            
+            if (image.complete) {
+                image.classList.add('loaded');
+            }
+        });
+    }
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('.image-gallery img');
-
-    images.forEach(image => {
-        image.onload = () => {
-            image.classList.add('loaded');  // Add 'loaded' class to trigger fade-in
-        };
-
-        // If the image is already cached, trigger the onload event
-        if (image.complete) {
-            image.onload();
-        }
-    });
-});
-
 
 // Select the Reveal All button
 const revealAllButton = document.getElementById('reveal-all');
@@ -128,4 +168,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Clear the gallery and re-add the shuffled cards
     shuffledCards.forEach(card => gallery.appendChild(card));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const script = document.createElement('script');
+    script.src = 'cache.js';
+    script.defer = true;
+    document.body.appendChild(script);
 });

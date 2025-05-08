@@ -1,0 +1,21 @@
+{
+  "name": "Deck of Dreams",
+  "short_name": "DeckDreams",
+  "description": "Explore my portfolio, featuring my Deck of Dreams — a tarot deck I designed.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#6e7000",
+  "icons": [
+    {
+      "src": "pale_moon_browser_logo_icon_152969.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "images/deck-of-dreams.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
