@@ -168,8 +168,7 @@ style {
     /* border: 1px solid rgba(255, 242, 172, 0.589); */
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 1);
     box-sizing: border-box;
-    will-change: transform, opacity;
-    
+    /* Removed will-change for better performance */
 }
 
 .image-gallery .overlay {
@@ -187,7 +186,8 @@ style {
     transition: opacity 0.3s ease-in-out;
     border-radius: 2px;
     z-index: 2;
-    will-change: transform, opacity;
+    /* Only use will-change for opacity since it's what's actually changing */
+    will-change: opacity;
     contain: layout paint;
 }
  /* Manual card reveal with minor scaling of the card */
@@ -311,5 +311,98 @@ style {
         /* padding: 5px 10px; */
     }
 }
+
+/* Add missing CSS rules from inline styles */
+body {
+    position: relative;
+    /* Load a lower quality version first for faster LCP */
+    background-color: #000; /* Fallback color while image loads */
+    background-image: url("../images/photo-1447433553548-2fc162393482.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Lora', serif;
+    /* Removed will-change which can cause performance issues */
+    /* Note: margin and padding already set in your existing CSS */
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* Prevent jitter on mobile devices */
+    }
+}
+
+/* Style for centered header */
+.centered-header {
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.critical-description-box {
+    display: block;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+    contain: content;
+}
+
+.critical-description-box p {
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px;
+    background: linear-gradient(45deg, gold, rgb(255, 229, 82), rgb(255, 243, 107));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 5px rgba(255, 217, 0, 0.3);
+    contain: paint;
+}
+
+/* Optimized LCP element (the paragraph) */
+.lcp-paragraph {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    color: gold; /* Simple solid color for faster paint */
+    /* Removed gradient background for better performance */
+    /* Removed content-visibility property that might delay LCP */
+}
+
+@media (max-width: 768px) {
+    .lcp-paragraph {
+        font-size: 1rem;
+    }
+}
+
+/* Fix for overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; /* Cover full height */
+    background: url("../images/deck-of-dreams.png") center/cover no-repeat;
+    width: 100%;
+    height: 100%; /* Ensure full height coverage */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 2px;
+    z-index: 2;
+    will-change: opacity; /* Only animate opacity */
+    contain: layout paint;
+}
+
 
 
