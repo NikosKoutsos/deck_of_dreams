@@ -170,6 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
     shuffledCards.forEach(card => gallery.appendChild(card));
 });
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const script = document.createElement('script');
     script.src = 'cache.js';
