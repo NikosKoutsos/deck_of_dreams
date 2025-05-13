@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Deck of Dreams">
@@ -12,26 +11,55 @@
     <title>The Deck of Dreams</title>
     <link rel="icon" href="pale_moon_browser_logo_icon_152969.ico" type="image/x-icon">
     
-    <!-- Resource hints to improve loading performance -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <!-- Preload only the most critical assets -->
+    <!-- Preload critical assets -->
     <link rel="preload" href="css/style.css" as="style">
-    <!-- Preload only the deck back image which appears many times -->
     <link rel="preload" href="images/deck-of-dreams.png" as="image" fetchpriority="high">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;700&display=swap" as="style">
     
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Defer non-critical CSS -->
+    <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 
-    <!-- Optimized font loading for LCP paragraph -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Optimized font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;700&display=swap" 
+          rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400;700&display=swap" rel="stylesheet">
+    </noscript>
 
-    <!-- Add manifest for PWA support -->
+    <!-- Inline critical CSS -->
+    <style>
+        /* Critical rendering path CSS */
+        body {
+            margin: 0;
+            background-color: #000;
+            font-family: 'Lora', serif;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .image-container {
+            width: 12%;
+            position: relative;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Add more critical CSS as needed */
+    </style>
+
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <header role="banner" class="centered-header"> <!-- Center align the header and its content -->
+    <header role="banner" class="centered-header">
         <button id="reveal-all" class="text-gradient" aria-label="Reveal all cards">Reveal</button>
         <nav role="navigation">
             <div class="text-gradient">
@@ -39,9 +67,9 @@
             </div>
         </nav>
     </header>
-    <main>        <div class="critical-description-box">
-            <!-- Pre-rendered high-priority paragraph with simplified gradient text -->
-            <p class="lcp-paragraph" id="main-description" fetchpriority="high">
+    <main>
+        <div class="critical-description-box">
+            <p class="lcp-paragraph" id="main-description">
                 Below you will find my curious Deck of Dreams. The design as well as their description are all curated by me.
                 <br><br>
                 We are like the Dreamer who dreams and then lives inside the dream.
@@ -50,114 +78,113 @@
             </p>
         </div>
         <div class="image-gallery">
-                    <div class="image-container">
-                        <img src="images/anathema_q-min.jpg" alt="Anathema" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>                    <div class="image-container">
-                            <img src="images/THE SUN-index.jpg" alt="The Sun" loading="eager" fetchpriority="high" width="512" height="512">
-                            <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                            <img src="images/The Star-min.jpg" alt="The Star" loading="eager" fetchpriority="high" width="512" height="512">
-                            <div class="overlay"></div>
-                        </div>
-                    <div class="image-container">
-                            <img src="images/the_spider_by_koutsosnikos_df3ag2o-min.jpg" alt="The Spider" loading="lazy" width="512" height="512">
-                            <div class="overlay"></div>
-                        </div>
-                    <div class="image-container">
-                            <img src="images\The Phoenix-min.jpg"  alt="The Phoenix" loading="lazy" width="512" height="512">
-                            <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                            <img src="images\the_end.png" alt="The End" loading="lazy" width="512" height="512">
-                            <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                            <img src="images\goddess-min.jpg" alt="The Goddess" loading="lazy" width="512" height="512">
-                            <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                            <img src="images\the_moon.png" alt="The Moon" loading="lazy" width="512" height="512">
-                            <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                            <img src="images/the horror-min.jpg" alt="The Horror" loading="lazy" width="512" height="512">
-                            <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/the_guardian.jpg" alt="The Guardian" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/facade-min-index.jpg" alt="The Facade" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/benevolence-min.jpg" alt="Benevolence" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-    
-                    <div class="image-container">
-                        <img src="images/mayura-min.jpg" alt="Mayura" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/The Tempest-min.jpg" alt="The Tempest" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/THE PRIEST-min.jpg" alt="The Priest" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/The Lovers-min.jpg" alt="The Lovers" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/The Emperor-min.jpg" alt="The Emperor" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/THE CURSE-min.jpg" alt="The Curse" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/The Architect-min.jpg" alt="The Architect" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/Oneiros-min.jpg" alt="Oneiros" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/mistake-min.png" alt="Error" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/melancholia_by_koutsosnikos_dfahanh-min.jpg" alt="Melancholia" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/La Llorona-min.jpg" alt="La Llorona" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images\khronos.png" alt="Khronos" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/EOS-min.jpg" alt="Eos" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                    <div class="image-container">
-                        <img src="images/Arachne-min.jpg" alt="Arachne" loading="lazy" width="512" height="512">
-                        <div class="overlay"></div>
-                    </div>
-                </div>
+            <div class="image-container">
+                <img src="images/anathema_q-min.jpg" alt="Anathema" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/THE SUN-index.jpg" alt="The Sun" fetchpriority="high" loading="eager" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/The Star-min.jpg" alt="The Star" loading="eager" fetchpriority="high" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/the_spider_by_koutsosnikos_df3ag2o-min.jpg" alt="The Spider" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images\The Phoenix-min.jpg" alt="The Phoenix" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images\the_end.png" alt="The End" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images\goddess-min.jpg" alt="The Goddess" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images\the_moon.png" alt="The Moon" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/the horror-min.jpg" alt="The Horror" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/the_guardian.jpg" alt="The Guardian" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/facade-min-index.jpg" alt="The Facade" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/benevolence-min.jpg" alt="Benevolence" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/mayura-min.jpg" alt="Mayura" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/The Tempest-min.jpg" alt="The Tempest" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/THE PRIEST-min.jpg" alt="The Priest" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/The Lovers-min.jpg" alt="The Lovers" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/The Emperor-min.jpg" alt="The Emperor" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/THE CURSE-min.jpg" alt="The Curse" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/The Architect-min.jpg" alt="The Architect" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/Oneiros-min.jpg" alt="Oneiros" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/mistake-min.png" alt="Error" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/melancholia_by_koutsosnikos_dfahanh-min.jpg" alt="Melancholia" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/La Llorona-min.jpg" alt="La Llorona" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images\khronos.png" alt="Khronos" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/EOS-min.jpg" alt="Eos" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+            <div class="image-container">
+                <img src="images/Arachne-min.jpg" alt="Arachne" loading="lazy" width="512" height="512" decoding="async">
+                <div class="overlay"></div>
+            </div>
+        </div>
     </main>
     <script src="script.js" defer></script>
     <script src="cache.js" defer></script>
-
 </body>
 </html>
