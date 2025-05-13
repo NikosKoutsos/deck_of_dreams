@@ -190,6 +190,7 @@ style {
     will-change: opacity;
     contain: layout paint;
 }
+
  /* Manual card reveal with minor scaling of the card */
 .image-gallery .image-container:hover{       
     transform: scale(1.15); /* Zoom effect remains */
